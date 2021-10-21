@@ -1,0 +1,25 @@
+cargo
+empresa
+setor
+vagas
+
+nome_empresa
+descricao_setor
+descricao_cargo
+salario
+
+  $obSetor    ->descricao_setor   = $_POST['descricao_setor'];
+        $obCargo    ->descricao         = $_POST['descricao_cargo'];
+        $obCargo    ->salario           = $_POST['salario'];
+        $obEmpresa  ->nome              = $_POST['nome_empresa'];
+        
+	  $vagas = Vaga::getVagas();
+    $empresa = Empresa::getEmpresas();
+    $cargo = Cargo::getCargos();
+    $setor = Setor::getSetores();
+    
+
+descricao_setor
+descricao_cargo
+nome_empresa
+salario
