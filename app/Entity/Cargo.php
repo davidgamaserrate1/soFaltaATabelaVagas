@@ -15,7 +15,7 @@ class Cargo{
  
     public $setor_id;
  
-    public function cadastrar(){  
+    public function cadastrar(){   
         $obDatabase = new Database('cargo');
         $this->id = $obDatabase->insert([
                 'descricao'    => $this->descricao,

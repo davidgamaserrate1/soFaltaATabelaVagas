@@ -46,18 +46,18 @@ class Vaga{
 
  
     public static function getVagas(){
-        return (new Database('vagas'))->select()
+        return (new Database('vagas'))->selectTabela('*','vagas')
                                       ->fetchAll(PDO::FETCH_CLASS,self::class);
     }
  
-    // public static function getVaga($id){
-    //     return (new Database('vagas'))->select('id = '.$id)
-    //                                   ->fetchObject(self::class);
-    // }
+    public static function getVaga($id){
+        return (new Database('vagas'))->select('id = '.$id)
+                                      ->fetchObject(self::class);
+    }
  
-    // public function excluir(){
-    //     return (new Database('vagas'))->delete('id ='.$this->id);
-    // }
+    public function excluir(){
+        return (new Database('vagas'))->delete('id ='.$this->id);
+    }
 
 }
 

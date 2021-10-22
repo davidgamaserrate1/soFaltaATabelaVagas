@@ -11,9 +11,9 @@ class Setor{
     public $descricao_setor;
  
     public $empresa_id;
+    public $id;
  
     public function cadastrar(){      
-        //inserir vaga no banco
         $obDatabase = new Database('setor');
         $this->id = $obDatabase->insert([
                 'descricao_setor'    => $this->descricao_setor  ,

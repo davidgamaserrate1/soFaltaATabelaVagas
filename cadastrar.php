@@ -26,7 +26,7 @@
         $obEmpresa  ->nome              = $_POST['nome_empresa'];
 
         $obSetor    ->descricao_setor   = $_POST['descricao_setor'];
-        $obSetor    ->empresa_id        = $_POST['empresa_id'];
+        $obSetor    ->empresa_id        = $_POST['setor_id'];
         
         
         // function Vaga( $descricao_setor,  $descricao_cargo, $nome_empresa, $salario) {
@@ -40,7 +40,7 @@
         $obEmpresa->cadastrar();
         $obSetor->cadastrar();        
 
-
+            
         $vgdescricao_cargo  =   $obCargo    ->descricao  ;
         $vgsalario          =    $obCargo    ->salario ;
         $vgnome_empresa     =    $obEmpresa  ->nome ;
